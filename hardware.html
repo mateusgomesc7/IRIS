@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+crossorigin="anonymous">
+<link href="css/dashboard.css" rel="stylesheet">
+<title>Informações sobre Google Glass</title>
+
+<style>
+body {
+	font-family: Arial;
+	font-size: 10pt;
+	overflow: hidden;
+}
+p{
+	text-align: justify;
+	text-indent: 20px;
+	padding:4pt;
+}
+article h1{
+	font-size: 20pt;
+	color: #ffffff;
+	padding:5px;
+	margin:0px;
+	font-weight: bold;
+}
+article h2{
+	font-size: 13pt;
+	margin:0px;
+	color: white;
+	font-weight: bold;
+}
+article{
+	margin-bottom: 400px;
+}
+img.img-dir{
+	display: block;
+	float: right;
+	margin-left: 5px;
+}
+
+</style>
+</head>
+
+<body>
+<article id="topo pr-4" ><header class="bg-dark text-center rounded"><h2>Clique sobre os componentes para obter informações
+</h2></header>
+
+</article>
+
+<article class="text-center" id="bomba">
+<header  class="bg-dark rounded">
+<h1>Bomba 5V</h1>
+</header>
+<p>Bombeará água para a planta quando a umidade do solo estiver baixa</p>
+<img src="img/bomba.jpg" alt="Bomba de Água 5v "/>
+</article>
+
+<article class="text-center" id="ultrassonico">
+<header class="bg-dark text-center rounded">
+<h1>Sensor Ultrassônico HC-SR04</h1>
+</header>
+<p>Enviará os dados da distãncia eu que a água se encontra do mesmo, para que o Arduino calcule o volume de água no reservatório</p>
+<img src="img/ultrassonico.jpg"alt="Sensor Ultrassônico">
+</article>
+
+<article class="text-center" id="sensorumidade">
+		<header class="bg-dark text-center rounded">
+				<h1>Sensor de Umidade do Solo <br> Higrômetro - 9SS19</h1>
+				</header>
+				<p>Alimentará o circuito caso em caso de falta de eletricidade</p>
+				<img src="img/sensorumidade.jpg" alt="Sensor de Umidade "/>
+				</article>
+</article>
+<article class="text-center" id="fonte">
+<header class="bg-dark text-center rounded">
+<h1>Fonte de Alimentação do Auxilar</h1>
+</header>
+<p>Alimentará o circuito caso em caso de falta de eletricidade</p>
+</article>
+
+<article class="text-center" id="gotejador">
+<header class="bg-dark text-center rounded">
+<h1>Gotejador</h1>
+</header>
+<p>Melhor forma de distribuir a água da irrigação</p>
+</article>
+
+<article  class="text-center" id="arduino">
+<header class="bg-dark text-center rounded">
+<h1>ARDUINO UNO</h1>
+<h2>O Cerébro</h2>
+<img src="img/arduino.jpg"
+class="img-dir" alt="Bateria e Gadgets do Google Glass"/>
+</header>
+<p>Controla todo o sistema, através dos dados recebidos pelos sensores</p>
+</article>
+
+<article class="text-center" id="reservatorio">
+<header class="bg-dark text-center rounded">
+<h1>Reservatório de Água</h1>
+</header>
+<p>Armazenará a água que for escoada pelo solo, para que seja reutilizada nas próximas irrigações</p>
+</article>
+</body>
+</html>
