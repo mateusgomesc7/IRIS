@@ -43,33 +43,36 @@ fetch('data/doughnut.json')
   .then(json => setDoughnut(json))
 
 function setDoughnut(stats){ //Funciona pq Deus qr--Dentro de uma função para que sejam lidos todos os valores do jason
-for(const data of stats){ //tlendo todos os dados do json
-const positivo=data.positivo //atribuindo os valores do json
-const negativo=data.negativo
-const dataDoughnut = {
-    labels: ["Contém %", "Resto %"], //Legendas do grafico
-    datasets: [{
-        data: [positivo,negativo], //dados mostrados
-        backgroundColor: ["#9B59B6", "#BDC3C7"],
-        hoverBackgroundColor: ["#B370CF", "#CFD4D8"]
-    }]
-}
-const optionsDoughnut = {//Sem legendas
-    legend: {
-        display: false
+    for(const data of stats){ //tlendo todos os dados do json
+        const positivo=data.positivo //atribuindo os valores do json
+        const negativo=data.negativo
+        const dataDoughnut = {
+            labels: ["Contém %", "Resto %"], //Legendas do grafico
+            datasets: [{
+                data: [positivo,negativo], //dados mostrados
+                backgroundColor: ["#9B59B6", "#BDC3C7"],
+                hoverBackgroundColor: ["#B370CF", "#CFD4D8"]
+            }]
+        }
+        const optionsDoughnut = {//Sem legendas
+            legend: {
+                display: false
+            }
+        }
+
+        const configDoughnut = {//Tipo do gráfico e suas configurações
+            type: 'doughnut',
+            data: dataDoughnut,
+            options: optionsDoughnut
+        }
+        const canvasDoughnut = new Chart(ctxDoughnut, configDoughnut)//Mostrando o gráfico
     }
-}
+}//Essa função deve conter os atributos do gráfico doughnut, pois os valores estão contidos nela
 
-const configDoughnut = {//Tipo do gráfico e suas configurações
-    type: 'doughnut',
-    data: dataDoughnut,
-    options: optionsDoughnut
-}
-const canvasDoughnut = new Chart(ctxDoughnut, configDoughnut)//Mostrando o gráfico
-      }
-  }//Essa função deve conter os atributos do gráfico doughnut, pois os valores estão contidos nela
-
-
+//Criei para testar uma coisa na função abaixo
+var horaLinha_1 = []
+var valorLinha_1 = []
+var i = 0
 
 // Gráfico de Linha1 - data
 fetch('data/linha1.json')
@@ -77,34 +80,44 @@ fetch('data/linha1.json')
   .then(json => setLinha1(json))
 //Função para mostrar o gráfico da temperatura
 function setLinha1(stats){
-for(const data of stats){
-     const valor =data.valor
-     const hora =data.hora
-const dataLinha1 = {
-    labels: [hora],
-    datasets: [
-        {
-            backgroundColor: 'rgba(65, 179, 249, 0.1)',
-            borderColor: '#41b3f9',
-            data: [valor]
+    for(const data of stats){
+
+        //Coloca os valores do .json na ordem do array
+        valorLinha_1[i] = data.valor
+         
+        horaLinha_1[i] = data.hora
+
+        i++
+        
+
+        //const hora = [hora3.length]
+        //const hora = data.hora
+        const dataLinha1 = {
+            labels: [ horaLinha_1[0], horaLinha_1[1], horaLinha_1[2], horaLinha_1[3],horaLinha_1[4], horaLinha_1[5], horaLinha_1[6], horaLinha_1[7] ],
+            datasets: [
+                {
+                    backgroundColor: 'rgba(65, 179, 249, 0.1)',
+                    borderColor: '#41b3f9',
+                    data: [ valorLinha_1[0], valorLinha_1[1], valorLinha_1[2], valorLinha_1[3], valorLinha_1[4], valorLinha_1[5], valorLinha_1[6], valorLinha_1[7] ]
+                }
+            ]
         }
-    ]
-}
-// Gráfico de Linha1 - options
-const optionsLinha1 = {
-    maintainAspectRatio: false,
-    legend: {
-        display: false
+        // Gráfico de Linha1 - options
+        const optionsLinha1 = {
+            maintainAspectRatio: false,
+            legend: {
+                display: false
+            }
+        }
+        // Gráfico de Linha1 - config
+        const configLinha1 = {
+            type: 'line',
+            data: dataLinha1,
+            options: optionsLinha1
+        }
+        //Mostrar Gráfico da temperatura
+        const lineChart1 = new Chart(ctxLinha1, configLinha1)
     }
-}
-// Gráfico de Linha1 - config
-const configLinha1 = {
-    type: 'line',
-    data: dataLinha1,
-    options: optionsLinha1
-}
-//Mostrar Gráfico da temperatura
-const lineChart1 = new Chart(ctxLinha1, configLinha1)}
 }
 
 
