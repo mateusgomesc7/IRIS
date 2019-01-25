@@ -17,41 +17,9 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <span class="nav-tittle"><strong> <i class="fas fa-bullseye text-success"></i> IRIS </strong> <br>Irrigação
-            Residencial</span>
-        
-        <div class="container mr-0">
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html"><span>Início</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./equipe.html"><span>Sobre nós</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./projetos.html"><span>Projeto</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./contato.html"><span>Contato</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./registro.html"><span>Registro</span></a>
-                    </li>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
-                    </form>
-                    <form class="form-inline ml-2">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnlogin"><a href="./dashboard.html" style="color:inherit">Login</a> </button>
-                   </form>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
+    <div>
+        <?php include("navbar.php"); ?>
+    </div>
     
     <div class="container m-5 bordered">
         <form>
