@@ -1,26 +1,34 @@
 [
   {
-    "icon": "alert-circle",
-    "bg": "bg-danger",
-    "name": "Leases Per Second / Minute",
-    "value": "0/0"
+    "valor": "15",
+    "mes": "Jan"
   },
   {
-    "icon": "pie-chart",
-    "bg": "bg-info",
-    "name": "Total Leases",
-    "value": "14"
+    "valor":"10",
+    "mes":"Fev"
   },
   {
-    "icon": "cpu",
-    "bg": "bg-primary",
-    "name": "CPU",
-    "value": "0 %"
+    "valor":"26",
+    "mes":"Mar"  
   },
   {
-    "icon": "server",
-    "bg": "bg-success",
-    "name": "SERVER",
-    "value": "dhcp"
+    "valor":"80",
+    "mes":"Abr"
+  },
+  {
+    "valor":"60",
+    "mes":"Mai"
+  },
+  {
+    "valor":"55",
+    "mes":"Jun"
+  },
+  {
+    "valor":"70",
+    "mes":"Jul"
+  },
+  {
+    "valor":"8",
+    "mes":"Ago"
   }
 ]

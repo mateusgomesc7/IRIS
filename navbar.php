@@ -36,7 +36,9 @@
           </form>
 
           <form class="form-inline ml-2">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnlogin"><a href="./dashboard.html" style="color:inherit">Login</a> </button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnlogin">
+              <a href="./dashboard.html" style="color:inherit"><span>Login</span></a> 
+            </button>
           </form> <!--btn login,com cor herdada da classe do botão-->
 
         </ul>
