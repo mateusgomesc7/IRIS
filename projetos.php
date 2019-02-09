@@ -44,13 +44,6 @@
             <a target="blank" href="http://www.nxeco.com">Nxeco</a>
             <a target="blank" href="http://swamp-project.org">SWAMP</a>
           </p>
-          <p>
-            Próximas etapas:
-            <br/> 
-            <a target="blank" href="https://getbootstrap.com/docs/4.1/examples/sign-in/">Página de login</a>  
-            <br/>   
-            <a target="blank" href="https://themes.getbootstrap.com/product/appstack-responsive-admin-template/">Interface do usuário</a>
-          </p>
         </div>
       </div>
     </div>
@@ -58,7 +51,6 @@
 
 
   <footer>
-
     <div class="card text-center bg-dark rounded-0">
       <div class="row-full bg-black p-2">
         <div class="card-header p-2">

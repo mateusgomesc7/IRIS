@@ -22,24 +22,22 @@
             <a class="nav-link" href="./projetos.php?page=projetos"><span>Projeto</span></a>
           </li>
 
-          <li class="nav-item <?php echo $page == 'contato' ? 'active' : '' ?>">
+          <!-- <li class="nav-item <?php //echo $page == 'contato' ? 'active' : '' ?>">
             <a class="nav-link" href="./contato.php?page=contato"><span>Contato</span></a>
           </li>
 
-          <li class="nav-item <?php echo $page == 'registro' ? 'active' : '' ?>">
+          <li class="nav-item <?php //echo $page == 'registro' ? 'active' : '' ?>">
             <a class="nav-link" href="./registro.php?page=registro"><span>Registro</span></a>
-          </li>
+          </li> -->
 
-          <form class="form-inline">
+          <!-- <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
-          </form>
+          </form> -->
 
-          <form class="form-inline ml-2">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnlogin">
-              <a href="./dashboard.html" style="color:inherit"><span>Login</span></a> 
-            </button>
-          </form> <!--btn login,com cor herdada da classe do botão-->
+          <li class="nav-item">
+              <a class="nav-link" href="./dashboard.php"><span>Dashboard</span></a> 
+          </li>
 
         </ul>
       </div>

@@ -33,21 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./projetos.php"><span>Projeto</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contato.php"><span>Contato</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./registro.html"><span>Registro</span></a>
-                    </li>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
-                    </form>
-                    <form class="form-inline ml-2">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnsair"> <a href="./index.html"
-                                style="color:inherit">Sair </a></button>
-                        <!--btn sair,com cor herdada da classe do botão-->
-                    </form>
+                    <li class="nav-item">   
+                        <a class="nav-link" href="./index.php">Sair</a>
+                    </li>    
                 </ul>
             </div>
         </nav>
