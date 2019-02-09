@@ -162,7 +162,7 @@ fetch('data/linha2.json')
   .then(res => res.json())
   .then(json => setLinha2(json))
 
-//Função para mostrar o gráfico da temperatura
+//Função para mostrar o gráfico de umidade
 function setLinha2(stats){
 
     const dataLinha2 = {
