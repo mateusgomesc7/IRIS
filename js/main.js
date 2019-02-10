@@ -115,7 +115,7 @@ function setDoughnut(stats){ //Funciona pq Deus qr--Dentro de uma função para 
 
 //--+--+--+--+--+--+--+--+--+--+ INICIO GRÁFICO DE LINHA TEMPERATURA--+--+--+--+--+--+--
 // Gráfico de Linha1 - data
-fetch('data/linha1.json')
+fetch('iris-crud/json/tempo-valor1.php')
   .then(res => res.json())
   .then(json => setLinha1(json))
 
@@ -125,12 +125,12 @@ function setLinha1(stats){
     //const hora = [hora3.length]
     //const hora = data.hora
     const dataLinha1 = {
-        labels: stats.map(v => v.hora),
+        labels: stats.map(v => v.tempo),
         datasets: [
             {
                 backgroundColor: 'rgba(65, 179, 249, 0.1)',
                 borderColor: '#41b3f9',
-                data: stats.map(v => v.valor)
+                data: stats.map(v => v.valor1)
             }
         ]
     }
@@ -158,7 +158,7 @@ function setLinha1(stats){
 
 //--+--+--+--+--+--+--+--+--+--+  INICIO GRÁFICO DE LINHA UMIDADE--+--+--+--+--+--+--+
 // Gráfico de Linha2 - data- Umidade
-fetch('data/linha2.json')
+fetch('iris-crud/json/tempo-valor2.php')
   .then(res => res.json())
   .then(json => setLinha2(json))
 
@@ -166,12 +166,12 @@ fetch('data/linha2.json')
 function setLinha2(stats){
 
     const dataLinha2 = {
-        labels: stats.map(v => v.hora),
+        labels: stats.map(v => v.tempo),
         datasets: [
             {
                 backgroundColor: 'rgba(65, 179, 249, 0.1)',
                 borderColor: '#41b3f9',
-                data: stats.map(v => v.valor)
+                data: stats.map(v => v.valor2)
             }
         ]
     }

@@ -1,9 +1,11 @@
 <?php
 require_once('../read-iris.php');
 
+header("Content-type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Origin: *");
 
 //Transofrma arrya php em json
-var_dump(json_encode(tempoValor2()));
+echo json_encode(tempoValor2());
 
 
 //Exemplo:
