@@ -14,7 +14,7 @@ CREATE TABLE `valores` (
 
 
 INSERT INTO valores
-    (time, valor1, valor2, valor3)
+    (tempo, valor1, valor2, valor3)
   VALUES
     (NOW(), 150, 250, 350),
     (NOW(), 150, 250, 350),

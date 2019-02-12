@@ -36,3 +36,25 @@ function tempoValor3() {
     $pdoStm = $connection->query($sql);
     return $pdoStm ? $pdoStm->fetchAll(PDO::FETCH_ASSOC) : null;
   }
+
+
+  function maxValor3(){
+    global $connection;
+    $sql = "SELECT max(valor3) FROM `valores`";
+    $pdoStm = $connection->query($sql);
+    return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
+  }
+
+  function minValor3(){
+    global $connection;
+    $sql = "SELECT min(valor3) FROM `valores`";
+    $pdoStm = $connection->query($sql);
+    return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
+  }
+
+  function mediaValor3(){
+    global $connection;
+    $sql = "SELECT avg(valor3) FROM `valores`";
+    $pdoStm = $connection->query($sql);
+    return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
+  }

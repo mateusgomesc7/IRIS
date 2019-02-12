@@ -11,6 +11,7 @@
         crossorigin="anonymous">
     <link href="css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+     
     <title>IRIS</title>
 </head>
 
@@ -50,7 +51,7 @@
                     </h6>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="./dashboard.html">
+                            <a class="nav-link active" href="./dashboard.php">
                                 <span data-feather="home">
                                     Home</span></a>
                         <li class="nav-item">
@@ -186,7 +187,7 @@
                                             <form>
                                                 <div class="form-row align-items-center">
                                                     <div class="my-1">
-                                                            <h5 class="card-title">26,25 &#8451;</h5>
+                                                            <h5 class="card-title" id="mediatemperatura"></h5><!--id para função em js-->
                                                     </div>
                                                     <div class="form-group">
                                                         <select id="inputState" class="form-control">
@@ -223,7 +224,7 @@
                                     <div class="card text-white bg-primary h-25 placas" style="max-width: 7rem;">
                                         <div class="card-header">Máximo</div>
                                         <div class="card-body">
-                                            <h5 class="card-title">28 &#8451;</h5>
+                                            <h5 class="card-title" id="maxtemperatura"></h5><!--id para função em js-->
                                         </div>
                                     </div>
                                     <!-- </div>
@@ -231,7 +232,7 @@
                                     <div class="card text-white bg-primary h-25 placas" style="max-width: 7rem;">
                                         <div class="card-header">Mínimo</div>
                                         <div class="card-body">
-                                            <h5 class="card-title">25 &#8451;</h5>
+                                            <h5 class="card-title" id="mintemperatura"></h5><!--id para função em js-->
                                         </div>
                                     </div>
                                     <!-- </div> -->
@@ -264,7 +265,7 @@
                                             <form>
                                                 <div class="form-row align-items-center">
                                                     <div class="my-1">
-                                                        <h5 class="card-title">46,875</h5>
+                                                        <h5 class="card-title" id="mediaumidade"></h5><!--id para função em js-->
                                                     </div>
                                                     <div class="form-group">
                                                         <select id="inputState" class="form-control">
@@ -300,12 +301,12 @@
                                             <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
                                                 <div class="card-header">Máximo</div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">70</h5>
+                                                    <h5 class="card-title"id="maxumidade">70</h5><!--id para função em js-->
                                                 </div>
                                             </div>
                             
                                             <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
-                                                <div class="card-header">Mínimo</div>
+                                                <div class="card-header" id="minumidade">Mínimo</div><!--id para função em js-->
                                                 <div class="card-body">
                                                     <h5 class="card-title">28</h5>
                                                 </div>
@@ -347,6 +348,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/feather.js"></script>
+    <script src="js/maxmin.js"></script>
 </body>
 
 </html>
