@@ -10,7 +10,7 @@ $connection = connect();
  */
 function tempoTemperatura() {
   global $connection;
-  $sql = "SELECT `temperatura`,`tempo` FROM `valores`";
+  $sql = "SELECT `temperatura`,`tempo` FROM `valores` ORDER BY id DESC LIMIT 15";
   $pdoStm = $connection->query($sql);
   return $pdoStm ? $pdoStm->fetchAll(PDO::FETCH_ASSOC) : null;
 }
@@ -21,7 +21,7 @@ function tempoTemperatura() {
  */
 function tempoUmidade() {
     global $connection;
-    $sql = "SELECT `umidade`,`tempo` FROM `valores`";
+    $sql = "SELECT `umidade`,`tempo` FROM `valores` ORDER BY id DESC LIMIT 15";
     $pdoStm = $connection->query($sql);
     return $pdoStm ? $pdoStm->fetchAll(PDO::FETCH_ASSOC) : null;
   }
