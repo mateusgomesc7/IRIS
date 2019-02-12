@@ -74,7 +74,18 @@ function setBar(stats){
 }
 //--+--+--+--+--+--+--+--+--+--+ FIM GRÁFICO DE BARRA  --+--+--+--+--+--+--
 
+//Atualiza os gráficos, no arquivo dashboard tem onload="animar()" no body
+function animar(){
+  // Gráfico de Linha1 - data
+  fetch('iris-crud/json/tempo-temperatura.php')
+    .then(res => res.json())
+    .then(json => setLinha1(json))
 
+  // Gráfico de Linha2 - data- Umidade
+  fetch('iris-crud/json/tempo-umidade.php')
+    .then(res => res.json())
+    .then(json => setLinha2(json))
+}
 
 //--+--+--+--+--+--+--+--+--+--+ INICIO GRÁFICO DOUGHNUT  --+--+--+--+--+--+--
 // Gráfico de Doughnut - data
@@ -114,10 +125,6 @@ function setDoughnut(stats){ //Funciona pq Deus qr--Dentro de uma função para 
 
 
 //--+--+--+--+--+--+--+--+--+--+ INICIO GRÁFICO DE LINHA TEMPERATURA--+--+--+--+--+--+--
-// Gráfico de Linha1 - data
-fetch('iris-crud/json/tempo-valor1.php')
-  .then(res => res.json())
-  .then(json => setLinha1(json))
 
 //Função para mostrar o gráfico da temperatura
 function setLinha1(stats){
@@ -130,7 +137,7 @@ function setLinha1(stats){
             {
                 backgroundColor: 'rgba(65, 179, 249, 0.1)',
                 borderColor: '#41b3f9',
-                data: stats.map(v => v.valor1)
+                data: stats.map(v => v.temperatura)
             }
         ]
     }
@@ -149,7 +156,6 @@ function setLinha1(stats){
     }
     //Mostrar Gráfico da temperatura
     const lineChart1 = new Chart(ctxLinha1, configLinha1)
-    
 }
 
 //--+--+--+--+--+--+--+--+--+--+   FIM GRÁFICO DE LINHA TEMPERATURA--+--+--+--+--+--+--
@@ -157,10 +163,6 @@ function setLinha1(stats){
 
 
 //--+--+--+--+--+--+--+--+--+--+  INICIO GRÁFICO DE LINHA UMIDADE--+--+--+--+--+--+--+
-// Gráfico de Linha2 - data- Umidade
-fetch('iris-crud/json/tempo-valor2.php')
-  .then(res => res.json())
-  .then(json => setLinha2(json))
 
 //Função para mostrar o gráfico de umidade
 function setLinha2(stats){
@@ -171,7 +173,7 @@ function setLinha2(stats){
             {
                 backgroundColor: 'rgba(65, 179, 249, 0.1)',
                 borderColor: '#41b3f9',
-                data: stats.map(v => v.valor2)
+                data: stats.map(v => v.umidade)
             }
         ]
     }
@@ -192,6 +194,8 @@ function setLinha2(stats){
     //Mostrar Gráfico da temperatura
     const lineChart2 = new Chart(ctxLinha2, configLinha2)
 
+    // Para animar o gráfico sem precisar atualizar a página
+    setTimeout(animar, 10000);
 }
 //--+--+--+--+--+--+--+--+--+--+  FIM GRÁFICO DE LINHA UMIDADE--+--+--+--+--+--+--+
 

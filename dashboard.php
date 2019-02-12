@@ -15,7 +15,7 @@
     <title>IRIS</title>
 </head>
 
-<body>
+<body onload="animar()">
     <div class="container">
 
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
