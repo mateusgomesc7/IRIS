@@ -306,9 +306,9 @@
                                             </div>
                             
                                             <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
-                                                <div class="card-header" id="minumidade">Mínimo</div><!--id para função em js-->
+                                                <div class="card-header" >Mínimo</div><!--id para função em js-->
                                                 <div class="card-body">
-                                                    <h5 class="card-title">28</h5>
+                                                    <h5 class="card-title"id="minumidade">28</h5>
                                                 </div>
                                             </div>
                                         

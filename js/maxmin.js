@@ -47,7 +47,7 @@ function setmaxumidade(status){
 
 fetch('iris-crud/json/min-valor3.php')//requisição do json
 .then(res => res.json())
-.then(json => ssetminumidade(json))
+.then(json => setminumidade(json))
 function setminumidade(status){
     const min = status["min(valor3)"];//define uma chave para pegar apenas o valor referente a ela
     minumidade.innerHTML=min+"ºC";//modifica o html, adiciona o ºC a string   
