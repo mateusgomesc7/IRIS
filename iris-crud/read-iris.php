@@ -27,14 +27,14 @@ function tempoUmidade() {
   }
 
 
-  /**
- *  Read coluna de "reservatorio" com coluna de "tempo"
+ /*
+ *  Seleciona o utimo dado do reservatorio
  */
-function tempoReservatorio() {
+function valorReservatorio() {
     global $connection;
-    $sql = "SELECT `reservatorio`,`tempo` FROM `valores`";
+    $sql = "SELECT reservatorio FROM valores ORDER BY id DESC LIMIT 1";
     $pdoStm = $connection->query($sql);
-    return $pdoStm ? $pdoStm->fetchAll(PDO::FETCH_ASSOC) : null;
+    return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
   }
 
 

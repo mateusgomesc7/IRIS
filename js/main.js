@@ -90,14 +90,13 @@ function animar(){
 //--+--+--+--+--+--+--+--+--+--+ INICIO GRÁFICO DOUGHNUT  --+--+--+--+--+--+--
 // Gráfico de Doughnut - data
 //Linkando o arquivo json
-fetch('data/doughnut.json')
+fetch('iris-crud/json/valor-reservatorio.php')
   .then(res => res.json())
   .then(json => setDoughnut(json))
 
 function setDoughnut(stats){ //Funciona pq Deus qr--Dentro de uma função para que sejam lidos todos os valores do jason
-    for(const data of stats){ //tlendo todos os dados do json
-        const positivo=data.positivo //atribuindo os valores do json
-        const negativo=data.negativo
+        const positivo = stats.reservatorio //atribuindo os valores do json
+        const negativo = (100 - stats.reservatorio)
         const dataDoughnut = {
             labels: ["Contém %", "Resto %"], //Legendas do grafico
             datasets: [{
@@ -118,7 +117,6 @@ function setDoughnut(stats){ //Funciona pq Deus qr--Dentro de uma função para 
             options: optionsDoughnut
         }
         const canvasDoughnut = new Chart(ctxDoughnut, configDoughnut)//Mostrando o gráfico
-    }
 }//Essa função deve conter os atributos do gráfico doughnut, pois os valores estão contidos nela
 //--+--+--+--+--+--+--+--+--+--+ FIM GRÁFICO DOUGHNUT  --+--+--+--+--+--+--
 

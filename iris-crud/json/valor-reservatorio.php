@@ -6,7 +6,7 @@ header("Content-type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Origin: *");
 
 //Transofrma arrya php em json
-var_dump(json_encode(tempoReservatorio()));
+echo json_encode(valorReservatorio());
 
 
 //Exemplo:
