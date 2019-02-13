@@ -102,7 +102,7 @@
       <p>Conheça mais sobre o IRIS</p>
       <div class="card-body text-center p-3">
         <div class="row-full p-2">
-            <a class="nav-link" href="./projetos.html"><h5 class="text-white btn btn-outline-success my-2 my-sm-0">IRIS <i class="fas fa-bullseye text-success"></i></h5></a>
+            <a class="nav-link" href="./projetos.php?page=projetos"><h5 class="text-white btn btn-outline-success my-2 my-sm-0">IRIS <i class="fas fa-bullseye text-success"></i></h5></a>
         </div>
       </div>
     </div>
