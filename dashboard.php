@@ -123,22 +123,38 @@
                                 </div>
                                 <div class="col mt-4">
                                     <div class="row">
-                                        <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
-                                            <div class="card-header">Energia</div>
+                                        <div class="card text-white bg-warning mb-3 h-25 placas" style="max-width: 7rem;">
+                                            <div class="card-header">Energia (KW)</div>
                                             <div class="card-body">
-                                                <h5 class="card-title">100 W</h5>
+                                                <h5 class="card-title" id="potencia">100</h5>
+
+                                                        <button type="button" class="btn btn-secondary" onclick="potenciaUP()">↑</button>
+
+                                                        <button type="button" class="btn btn-secondary" onclick="potenciaDOWN()">↓</button>
+                                                
                                             </div>
                                         </div>
-                                        <div class="card text-white bg-secondary mb-3 h-25 placas" style="max-width: 7rem;">
-                                            <div class="card-header">Água</div>
+
+                                        <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 6rem;">
+                                            <div class="card-header">Água (L)</div>
                                             <div class="card-body">
-                                                <h5 class="card-title">10 L</h5>
+                                                <h5 class="card-title" id="agua">10</h5>
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <button type="button" class="btn btn-secondary" onclick="aguaUP()">↑</button>
+                                                    </div>
+                                                    <div class="col">
+                                                        <button type="button" class="btn btn-secondary" onclick="aguaDOWN()">↓</button>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="card text-white bg-success mb-3 h-25 w-75 placas" style="max-width: 7rem;">
                                             <div class="card-header">Gasto mensal</div>
                                             <div class="card-body w-auto">
-                                                <h5 class="card-title">R$ 4,00</h5>
+                                                <h5 class="card-title" id="valorTotal">R$ 0,00</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -349,6 +365,7 @@
     <script src="js/main.js"></script>
     <script src="js/feather.js"></script>
     <script src="js/maxmin.js"></script>
+    <script src="js/calculoGasto.js"></script>
 </body>
 
 </html>
