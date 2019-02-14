@@ -126,7 +126,7 @@
                                         <div class="card text-white bg-warning mb-3 h-25 placas" style="max-width: 7rem;">
                                             <div class="card-header">Energia (KW)</div>
                                             <div class="card-body">
-                                                <h5 class="card-title" id="potencia">100</h5>
+                                                <h5 class="card-title" id="potencia">0</h5>
 
                                                         <button type="button" class="btn btn-secondary" onclick="potenciaUP()">↑</button>
 
@@ -138,7 +138,7 @@
                                         <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 6rem;">
                                             <div class="card-header">Água (L)</div>
                                             <div class="card-body">
-                                                <h5 class="card-title" id="agua">10</h5>
+                                                <h5 class="card-title" id="agua">0</h5>
 
                                                 <div class="row">
                                                     <div class="col">
@@ -317,14 +317,14 @@
                                             <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
                                                 <div class="card-header">Máximo</div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title"id="maxumidade">70</h5><!--id para função em js-->
+                                                    <h5 class="card-title"id="maxumidade">0</h5><!--id para função em js-->
                                                 </div>
                                             </div>
                             
                                             <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
                                                 <div class="card-header" >Mínimo</div><!--id para função em js-->
                                                 <div class="card-body">
-                                                    <h5 class="card-title"id="minumidade">28</h5>
+                                                    <h5 class="card-title"id="minumidade">0</h5>
                                                 </div>
                                             </div>
                                         

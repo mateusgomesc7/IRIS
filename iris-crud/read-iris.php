@@ -60,3 +60,26 @@ function valorReservatorio() {
     $pdoStm = $connection->query($sql);
     return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
   }
+
+
+  function mediaumidade(){
+    global $connection;
+    $sql = "SELECT avg(umidade) FROM `valores`";//Selecionar a media dos valores da umidade do banco
+    $pdoStm = $connection->query($sql);
+    return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
+  }
+
+  function maxumidade(){
+    global $connection;
+    $sql = "SELECT max(umidade) FROM `valores`";//Selecionar o valor maximo dos valores da umidade do banco
+    $pdoStm = $connection->query($sql);
+    return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
+  }
+
+  
+  function minumidade(){
+    global $connection;
+    $sql = "SELECT min(umidade) FROM `valores`";//Selecionar o valor minimo valores da umidade do banco
+    $pdoStm = $connection->query($sql);
+    return $pdoStm ? $pdoStm->fetch(PDO::FETCH_ASSOC) : null;
+  }
