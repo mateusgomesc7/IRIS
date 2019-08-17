@@ -17,7 +17,7 @@
 
 <body onload="animar()">
     <div class="container">
-
+        <!-- Header -->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
 
             <span class="nav-tittle"><strong> <i class="fas fa-bullseye text-success"></i> IRIS </strong> <br>Irrigação
@@ -41,10 +41,9 @@
             </div>
         </nav>
 
-
         <div class="container-fluid mt-4">
+            <!-- Menu do lado ESQUERDO -->
             <nav class="col-md-2 d-none d-md-block bg-light sidebar bg-dark">
-                <!-- Menu do lado ESQUERDO -->
                 <div class="sidebar-sticky">
                     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                         <span>Usuário</span>
@@ -106,234 +105,125 @@
                     </ul> -->
                 </div>
             </nav>
-
-
+            <!-- Main -->
             <main role=" main" class="col-md-9 ml-sm-auto col-lg-20 p-4 m-4  mt-4">
-                <div class="row">
-                    <div class="card border-success mb-3 mt-4 text-center" id="testecard" style="width: 700px;">
-                        <div class="card-body text-success ">
-                            <div class="row">
-                                <div class="col mt-4">
-                                    <div class="card d-flex flex-row doughnut">
-                                        <!-- Gráfico de Doughnut  -  Reservatório -->
-                                        <div class="chart">
-                                            <canvas class="canvasDoughnut" id="canvasDoughnut"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col mt-4">
-                                    <div class="row">
-                                        <div class="card text-white bg-warning mb-3 h-25 placas" style="max-width: 7rem;">
-                                            <div class="card-header">Energia (KW)</div>
-                                            <div class="card-body">
-                                                <h5 class="card-title" id="potencia">0</h5>
-
-                                                        <button type="button" class="btn btn-secondary" onclick="potenciaUP()">↑</button>
-
-                                                        <button type="button" class="btn btn-secondary" onclick="potenciaDOWN()">↓</button>
-                                                
-                                            </div>
-                                        </div>
-
-                                        <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 6rem;">
-                                            <div class="card-header">Água (L)</div>
-                                            <div class="card-body">
-                                                <h5 class="card-title" id="agua">0</h5>
-
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-secondary" onclick="aguaUP()">↑</button>
-                                                    </div>
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-secondary" onclick="aguaDOWN()">↓</button>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="card text-white bg-success mb-3 h-25 w-75 placas" style="max-width: 7rem;">
-                                            <div class="card-header">Gasto mensal</div>
-                                            <div class="card-body w-auto">
-                                                <h5 class="card-title" id="valorTotal">R$ 0,00</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card border-success mb-3 mt-4 text-center" id="testecard" style="width: 700px;">
-                        <div class="card-body text-success ">
-                            <div class="card-header">Gasto de energia e água por mês</div>
+                <!-- Gráfico Dought, Gasto mensal -->
+                <div class="card border-success w-100 mb-3 mt-4 shadow">
+                    <div class="card-body text-success text-center">
+                        <div class="row">
                             <div class="col mt-4">
-                                <div class="row mt-4">
-                                    <div class="card d-flex flex-row">
-                                        <!-- Gráfico de Barra  -  Gasto de água por mês -->
-                                        <div class="chart">
-                                            <canvas id="barChart"></canvas>
-                                        </div>
-                                    </div>
+                                <div id="tamanhoDoughnut">
+                                    <!-- Gráfico de Doughnut  -  Reservatório -->
+                                    <canvas class="canvasDoughnut" id="canvasDoughnut"></canvas>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card border-success mb-3 mt-4 text-center" id="testecard" style="width: 700px;">
-                        <div class="card-body text-success ">
-                            <div class="card-header">Temperatura</div>
                             <div class="col mt-4">
-                                <div class="row mt-4">
-                                    <div class="card d-flex flex-row">
-                                        <!-- Gráfico de Linha  -  Temperatura -->
-                                        <div class="chart">
-                                            <canvas id="lineGraph1"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col mt-5">
                                 <div class="row">
-
-                                    <div class="card text-white bg-primary mb-4 ml-2 h-25 placas" style="max-width: 8rem;">
-                                        <div class="card-header">Média</div>
+                                    <div class="card text-white bg-warning mb-3 h-25 placas" style="max-width: 7rem;">
+                                        <div class="card-header">Energia (KW)</div>
                                         <div class="card-body">
-                                            <form>
-                                                <div class="form-row align-items-center">
-                                                    <div class="my-1">
-                                                            <h5 class="card-title" id="mediatemperatura"></h5><!--id para função em js-->
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <select id="inputState" class="form-control">
-                                                            <option selected>Mês</option>
-                                                            <option>Dia</option>
-                                                            <option>Ano</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                            <h5 class="card-title" id="potencia">0</h5>
+                                                <button type="button" class="btn btn-secondary d-inline" onclick="potenciaUP()">↑</button>
+                                                <button type="button" class="btn btn-secondary d-inline" onclick="potenciaDOWN()">↓</button>
                                         </div>
                                     </div>
-
-                                    <!-- Período -->
-                                    <div id="periodo" class="card text-white bg-primary mb-3 placas" style="max-width: 9rem;">
-                                        <div class="card-header">Período</div>
+                                    <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 6rem;">
+                                        <div class="card-header">Água (L)</div>
                                         <div class="card-body">
-                                            <div class="form-row">
-                                                <div class="form-group col">
-                                                    <label for="inputEmail4">início</label>
-                                                    <input type="date" class="form-control">
-                                                </div>
-                                                <div class="form-group col">
-                                                    <label for="inputPassword4">fim</label>
-                                                    <input type="date" class="form-control">
-                                                </div>
+                                            <h5 class="card-title" id="agua">0</h5>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-secondary d-inline" onclick="aguaUP()">↑</button>
+                                                <button type="button" class="btn btn-secondary d-inline" onclick="aguaDOWN()">↓</button>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- Máximo e Mínimo -->
-                                    <!-- <div class="row"> -->
-                                    <!-- <div class="col"> -->
-                                    <div class="card text-white bg-primary h-25 placas" style="max-width: 7rem;">
-                                        <div class="card-header">Máximo</div>
-                                        <div class="card-body">
-                                            <h5 class="card-title" id="maxtemperatura"></h5><!--id para função em js-->
+                                    <div class="card text-white bg-success mb-3 h-25 w-75 placas" style="max-width: 7rem;">
+                                        <div class="card-header">Gasto mensal</div>
+                                        <div class="card-body w-auto">
+                                            <h5 class="card-title" id="valorTotal">R$ 0,00</h5>
                                         </div>
                                     </div>
-                                    <!-- </div>
-                                    <div class="col"> -->
-                                    <div class="card text-white bg-primary h-25 placas" style="max-width: 7rem;">
-                                        <div class="card-header">Mínimo</div>
-                                        <div class="card-body">
-                                            <h5 class="card-title" id="mintemperatura"></h5><!--id para função em js-->
-                                        </div>
-                                    </div>
-                                    <!-- </div> -->
-                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="card border-success mb-3 mt-4 text-center" id="testecard" style="width: 700px;">
-                        <div class="card-body text-success ">
-                            <div class="card-header">Umidade</div>
-                            <div class="col mt-4">
-                                <div class="row mt-4">
-                                    <div class="card d-flex flex-row">
-                                        <!-- Gráfico de Linha  -  umidade -->
-                                        <div class="chart">
-                                            <canvas id="lineGraph2"></canvas>
-                                        </div>
+                <!-- Gráfico temperatura -->
+                <div class="card border-success w-100 mb-3 mt-4 shadow">
+                    <div class="card-header text-success text-center">Temperatura</div>
+                    <div class="card-body text-success text-center">
+                            <!-- Gráfico de Linha  -  Temperatura -->
+                            <div class="row mt-4">
+                                <canvas id="lineGraph1"></canvas>
+                            </div>
+                            <div class="row dadosEspecificos">
+                                <!-- Média -->
+                                <div class="card text-white bg-primary h-25 placas" style="max-width: 7rem;">
+                                    <div class="card-header">Média</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="mediatemperatura"></h5><!--id para função em js-->
+                                    </div>
+                                </div>
+                                <!-- Máximo -->
+                                <div class="card text-white bg-primary h-25 placas" style="max-width: 7rem;">
+                                    <div class="card-header">Máximo</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="maxtemperatura"></h5><!--id para função em js-->
+                                    </div>
+                                </div>
+                                <!-- Mínimo -->
+                                <div class="card text-white bg-primary h-25 placas" style="max-width: 7rem;">
+                                    <div class="card-header">Mínimo</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="mintemperatura"></h5><!--id para função em js-->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col mt-5">
-                                <div class="row">
-
-                                    <div class="card text-white bg-primary mb-4 ml-2 h-25 placas" style="max-width: 8rem;">
-                                        <div class="card-header">Média</div>
-                                        <div class="card-body">
-                                            <form>
-                                                <div class="form-row align-items-center">
-                                                    <div class="my-1">
-                                                        <h5 class="card-title" id="mediaumidade"></h5><!--id para função em js-->
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <select id="inputState" class="form-control">
-                                                            <option selected>Mês</option>
-                                                            <option>Dia</option>
-                                                            <option>Ano</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
+                    </div>
+                </div>
+                <!-- Gráfico Umidade -->
+                <div class="card border-success w-100 mb-3 mt-4 shadow">
+                    <div class="card-header text-success text-center">Umidade</div>
+                    <div class="card-body text-success text-center">
+                            <div class="row mt-4">
+                                <!-- Gráfico de Linha  -  umidade -->
+                                <canvas id="lineGraph2"></canvas>
+                            </div>
+                            <div class="row dadosEspecificos">
+                                <!-- Média -->
+                                <div class="card text-white bg-primary mb-4 ml-2 h-25 placas" style="max-width: 8rem;">
+                                    <div class="card-header">Média</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="mediaumidade"></h5><!--id para função em js-->
                                     </div>
-
-                                    <!-- Período -->
-                                    <div id="periodo" class="card text-white bg-primary mb-3 placas" style="max-width: 9rem;">
-                                        <div class="card-header">Período</div>
-                                        <div class="card-body">
-                                            <div class="form-row">
-                                                <div class="form-group col">
-                                                    <label for="inputEmail4">início</label>
-                                                    <input type="date" class="form-control">
-                                                </div>
-                                                <div class="form-group col">
-                                                    <label for="inputPassword4">fim</label>
-                                                    <input type="date" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <!-- Máximo -->
+                                <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
+                                    <div class="card-header">Máximo</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title"id="maxumidade">0</h5><!--id para função em js-->
                                     </div>
-
-                                    <!-- Máximo e Mínimo -->
+                                </div>
+                                <!-- Mínimo -->
+                                <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
+                                    <div class="card-header" >Mínimo</div><!--id para função em js-->
+                                    <div class="card-body">
+                                        <h5 class="card-title"id="minumidade">0</h5>
+                                    </div>
+                                </div>
                                     
-                                            <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
-                                                <div class="card-header">Máximo</div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title"id="maxumidade">0</h5><!--id para função em js-->
-                                                </div>
-                                            </div>
-                            
-                                            <div class="card text-white bg-primary mb-3 h-25 placas" style="max-width: 7rem;">
-                                                <div class="card-header" >Mínimo</div><!--id para função em js-->
-                                                <div class="card-body">
-                                                    <h5 class="card-title"id="minumidade">0</h5>
-                                                </div>
-                                            </div>
-                                        
-                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
-
+                <!-- Gasto mensal de energia e água -->
+                <div class="card border-success w-100 mb-3 mt-4 shadow">
+                    <div class="card-header text-success text-center">Gasto de energia e água por mês</div>
+                    <div class="card-body text-success text-center">
+                        <!-- Gráfico de Barra  -  Gasto de água por mês -->
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+                
             </main>
         </div>
     </div>

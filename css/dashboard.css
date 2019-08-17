@@ -112,22 +112,11 @@ body {
     margin: 2px !important; 
   }
 
-  canvas.canvasDoughnut {
-    width:"150" !important;
-    height:"150" !important;
-  }
-
-  /* footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-} */
-
 iframe#frame-spec{
 	width: 380px;
 	height: 400px;
 	overflow: hidden;
-  border:none;
+  border: none;
   padding: 4pt;
 }
 
@@ -154,12 +143,11 @@ area{
   width: 500px !important;
 }
 
-.canvasDoughnut{
-  width: 175px;
-  height: 175px;
+.dadosEspecificos {
+  padding-left: 24%
 }
 
-.doughnut{
-  width: 200px;
-  height: 175px;
+#tamanhoDoughnut {
+  width:200px !important;
+  height:200px !important;
 }
