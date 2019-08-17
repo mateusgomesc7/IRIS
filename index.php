@@ -84,9 +84,7 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <h4>IRIS é IRIS</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate distinctio voluptatem obcaecati deserunt
-            similique accusamus enim temporibus ab tenetur minima hic aliquid debitis maxime praesentium quos odio,
-            beatae placeat quae.
+          Com o IRIS você pode desfrutar da maior praticidade, podendo acompanhar o estado de sua planta e irrigar ela de onde você estiver.
           </p>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">

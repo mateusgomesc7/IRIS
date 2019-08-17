@@ -34,14 +34,10 @@
         <div class="col-sm-6 text-center">
           <h2>Irrigação Residencial Inteligente Sistemática</h2>
           <p class="lead">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint debitis at asperiores beatae doloribus, dolor
-            illum sunt nisi consequuntur voluptate velit quia est necessitatibus, maxime perferendis corporis. Beatae,
-            culpa earum?
+          O nosso projeto consiste, primeiramente, em um reservatório de água que armazena a água que o usuário deposita. Essa água será utilizada em um sistema de irrigação que, por sua vez, será acionado através de um microcontrolador, o qual estará conectado a sensores de umidade e temperatura que coletarão os dados do solo constantemente.
           </p>
           <p class="lead">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint debitis at asperiores beatae doloribus, dolor
-            illum sunt nisi consequuntur voluptate velit quia est necessitatibus, maxime perferendis corporis. Beatae,
-            culpa earum?
+          Os dados serão interpretados de acordo com as necessidades do solo analisado e, dependendo da sua situação, será acionado um irrigador que manterá a sua umidade adequada e evitará o desperdício de água. Por fim, os dados serão atualizados a cada instante e, através do microcontrolador, serão enviados para o site de controle do usuário, onde serão armazenados e exibidos através de um gráfico, podendo assim, identificar uma possível anomalia, o que será um fato primordial para irrigação ou não da planta que está sendo analisada.
           </p>
           <p>
             Projetos parecidos:
