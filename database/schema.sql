@@ -14,7 +14,7 @@ CREATE TABLE `valores` (
 
 
 INSERT INTO valores
-    (tempo, valor1, valor2, valor3)
+    (tempo, temperatura, umidade, reservatorio)
   VALUES
     (NOW(), 150, 250, 350),
     (NOW(), 150, 250, 350),
